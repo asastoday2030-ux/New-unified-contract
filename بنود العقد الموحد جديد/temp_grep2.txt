@@ -1,0 +1,3 @@
+1031: <input type="file" id="pdf-file" accept=".pdf" style="display:none" onchange="App.handlePDFFile(this.files[0])">
+1063: if(f?.type==='application/pdf') this.handlePDFFile(f);
+1068: async handlePDFFile(file) {

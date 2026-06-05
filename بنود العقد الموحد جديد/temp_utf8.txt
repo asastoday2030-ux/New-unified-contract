@@ -1,0 +1,12 @@
+﻿
+,,WORKING UNIT RATES - PRICING ATTACHMENT,,,,,RFx NO. 4000083770,,,,
+
+
+,رقم المناقصة ,رقم البند,نوع البند,الـوصــــف المختصر,الـوصــــف الكامل ,الكمية,الوحدة,سعر الوحدة,العملة,الإجمالي,نوع الدفع
+,RFx.NO,Item ,Line type ,Short Description ,Long Description,Qty,UOM ,Unit Price,Currency,TOTAL,Payment Type
+,4000083770,A1,Description,"انشاء وصيانة شبكات التوزيع
+","CONSTRUCTION AND MAINTENANCE OF DISTRIBUTION NETWORKS  
+   The work is Including providing all necessary manpower, equipment , Devices and tools for loading and transporting of materials from any warehouse designated by company to work site and perform the work as per the scope of  work and company standards including  getting all required (R.O.W) and permissions to perform the required works and payment of related fees and all requirements like traffic safety plans and making test bits if required, preparing, updating and submitting of the drawings "" As Built "" on hard and  digital copies including field survey for coordinate Maximum spatial accuracy 15 cm, technical copies, including , data and photos of related electrical equipment, cables,CABLES SPLICING / JOINTING AND TERMINATIONS, poles, equipment and meters  with at least two digital photos of electrical equipment  according to Company Geographical Information System format  (Arc Pro / UN /ArcFM) and technical attributes according to Unified Data Model (EUDM) and with full compliance of Integrated Safety Management System (ISMS )  requirements as per Company  requirments and restore the site to its previous condition after completion of implementation work. The statement in this item is applied to all contract items mentioned blow 
+
+انشاء وصيانة شبكات التوزيع 
+ العمل يشمل توفير كافة العمالة والمعدات والأجهزة والعدد اللازمة لتحميل ونق�

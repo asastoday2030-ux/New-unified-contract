@@ -1,0 +1,52 @@
+198: <button class="btn btn-outline btn-sm" onclick="App.go('pdf')">📄 PDF</button>
+219: Full Arabic/English | Dark/Light | PDF AI Analysis
+227: 'nav.pdf': 'تحليل PDF الذكي',
+242: 'page.pdf': 'تحليل PDF الذكي',
+258: 'nav.pdf': 'AI PDF Analyzer',
+273: 'page.pdf': 'AI PDF Analyzer',
+441: pdf:       () => this.renderPDF(area),
+570: {icon:'📄', ar:'تحليل ملف PDF', en:'Analyze PDF File', subAr:'استخراج ذكي + كشف أخطاء', subEn:'Smart extraction + error detection', page:'pdf'},
+730: <button class="btn btn-outline btn-sm" onclick="App.exportBOQ('pdf')">🖨️ PDF</button>
+936: else if(type==='pdf') exportToPDF(this.state.boq, this.state.boq.meta);
+1008: // PDF ANALYZER (AI-powered)
+1010: renderPDF(c) {
+1019: <h2 style="font-size:17px;font-weight:900;margin-bottom:3px;">${ar?'محلل مستندات PDF الذكي':'AI PDF Document Analyzer'}</h2>
+1021: ? 'ارفع ملف PDF لاستخراج البنود تلقائياً، مقارنتها بالأسعار الموحدة، واكتشاف الأخطاء البشرية في التسعير'
+1022: : 'Upload a PDF to automatically extract items, compare with unified prices, and detect human pricing errors'}</p>
+1031: <input type="file" id="pdf-file" accept=".pdf" style="display:none" onchange="App.handlePDFFile(this.files[0])">
+1033: <div class="dz-title">${ar?'اسحب ملف PDF هنا أو انقر للاختيار':'Drag & drop PDF here or click to choose'}</div>
+1036: <span style="background:rgba(0,132,61,0.15);border:1px solid var(--border-sec);color:var(--sec-primary);padding:5px 14px;border-radius:99px;font-size:11.5px;font-weight:600;">PDF</span>
+1063: if(f?.type==='application/pdf') this.handlePDFFile(f);
+1064: else toast(ar?'يرجى رفع ملف PDF فقط':'Please upload a PDF file only','error');
+1068: async handlePDFFile(file) {
+1071: if(!window.pdfjsLib){ toast(ar?'تعذّر تحميل مكتبة PDF.js — تحقق من الاتصال':'Failed to load PDF.js — check connection','error'); return; }
+1100: const items = this._parsePDFItems(fullText);
+1114: this._renderPDFResults(result, results);
+1123: _parsePDFItems(text) {
+1189: _renderPDFResults(result, container) {
+1219: <button class="btn btn-primary" onclick="App.importPDFAll()">📥 ${ar?'استيراد الكل للمنشئ':'Import All to Builder'} (${items.length})</button>
+1220: <button class="btn btn-gold" onclick="App.exportPDFReport()">📊 ${ar?'تصدير التقرير':'Export Report'}</button>
+1232: <div id="pdf-tab-matched">${this._renderPDFMatched(items)}</div>
+1233: <div id="pdf-tab-missing" style="display:none;">${this._renderPDFMissing(depResults)}</div>
+1234: <div id="pdf-tab-errors" style="display:none;">${this._renderPDFErrors(pricingErrors)}</div>
+1235: <div id="pdf-tab-corrected" style="display:none;">${this._renderPDFCorrected(items,depResults)}</div>
+1247: _renderPDFMatched(items) {
+1269: <td><input class="qty-cell-input" type="number" value="${itm.qty}" onchange="App._updatePDFQty(${idx},this.value)"></td>
+1275: ${hasErr?`<button class="btn btn-outline btn-sm" onclick="App._fixPDFPrice(${idx})" title="${ar?'تصحيح السعر':'Fix Price'}">🔧</button>`:''}
+1276: <button class="btn btn-primary btn-sm btn-icon" onclick="App._importOnePDF(${idx})" title="${ar?'إضافة للمنشئ':'Add to Builder'}">➕</button>
+1283: _renderPDFMissing(depResults) {
+1329: _renderPDFErrors(errors) {
+1368: <button class="btn btn-sm btn-primary" onclick="App._fixPDFPriceByCode('${item.code}',${err.suggested})">✅ ${ar?'تصحيح للسعر الموحد':'Fix to Unified Price'}</button>
+1379: _renderPDFCorrected(items, depResults) {
+1434: // PDF Action Helpers
+1435: importPDFAll() {
+1443: _importOnePDF(idx) {
+1457: _updatePDFQty(idx,v) {
+1461: _fixPDFPrice(idx) {
+1468: if(res) this._renderPDFResults(this.state.pdfResult, res);
+1471: _fixPDFPriceByCode(code, price) {
+1477: if(res) this._renderPDFResults(this.state.pdfResult, res);
+1484: if(getItemByCode(code)) this.state.boq.items.push({code,qty:qty||1,customPrice:null,note:this.lang==='ar'?'من تحليل PDF':'From PDF analysis'});
+1489: exportPDFReport() {
+1492: exportToExcel(boq,{woNumber:this.state.pdfResult.woNumber,project:this.lang==='ar'?'تقرير تحليل PDF':'PDF Analysis Report'});
+1666: ${dep.missing.length?`<div class="card"><div class="card-head" style="background:rgba(255,77,106,0.07);"><span>⚠️</span><span class="card-title" style="color:var(--accent-red);">${ar?'بنود مفقودة':'Missing Items'} — ${dep.missing.length}</span></div><div class="validator-wrap">${this._renderPDFMissing(dep).replace('<div class="validator-wrap">','').replace('</div>','')}</div></div>`:`<div class="alert alert-ok"><span class="alert-icon">✅</span><span>${ar?'المقايسة مكتملة':'BOQ is complete'}</span></div>`}

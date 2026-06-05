@@ -1,0 +1,9 @@
+709: <div class="boq-totals" id="boq-totals" style="display:none;">
+756: this._renderBOQTable();
+836: this._renderBOQTable();
+855: _renderBOQTable() {
+857: const totals = document.getElementById('boq-totals');
+911: removeBOQItem(idx) { this.state.boq.items.splice(idx,1); this._renderBOQTable(); },
+912: clearBOQ() { if(!confirm(this.lang==='ar'?'مسح جميع البنود؟':'Clear all items?'))return; this.state.boq.items=[]; this._renderBOQTable(); },
+1002: this._renderBOQTable();
+1460: <div class="boq-totals">

@@ -1,0 +1,13 @@
+Total Rows: 1094
+Columns: ['', 'RFx.NO', 'Item ', 'Line type ', 'Short Description ', 'Long Description', 'Qty', 'UOM ', 'Unit Price', 'Currency', 'TOTAL', 'Payment Type']
+
+Value Counts for Line type:
+Counter({'Breakdown': 918, 'Description': 174, 'Breakdown ': 2})
+
+Value Counts for UOM:
+Counter({'EA': 566, 'M': 150, 'M2': 60, 'ASM': 32, 'ST': 24, 'M3': 24, 'KIT': 18, '%': 11, 'KM': 6, ' EA': 4, 'EA ': 4, ' M': 3, 'H': 3, ' ST': 2, '    ASM': 2, ' M2': 2, '\nST': 1, ' KM': 1, ' M   ': 1, 'EA  ': 1, 'M2 ': 1, '\nM': 1, ' M2 ': 1, 'BTU': 1, 'MON': 1})
+
+Currency types:
+Counter({'SAR': 920})
+
+Unit Prices - Min: 0.21, Max: 25000.0, Count: 909

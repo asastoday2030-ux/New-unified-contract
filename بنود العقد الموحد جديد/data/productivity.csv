@@ -1,0 +1,11 @@
+CrewCode,CrewName,DailyOutput,UOM,LaborDailyCost,EquipmentDailyCost,Notes
+CR-01,Civ Excavation,35,M3,1500,2400,Normal soil excavation crew (Excavator + Loader + 3 Laborers)
+CR-02,Civ Rock Excavation,8,M3,1800,4500,Rock soil excavation crew (Heavy Excavator with Jackhammer + 2 Laborers)
+CR-03,Cable Laying MV,450,M,1600,1200,Medium Voltage cable pulling crew (Puller winches + 8 Laborers)
+CR-04,Cable Laying LV,650,M,1400,800,Low Voltage cable laying crew (4 Laborers + Roller accessories)
+CR-05,Concrete Foundation,12,M3,2200,1400,Concrete pouring crew (Mixer vehicle access + 4 Laborers)
+CR-06,Asphalt Restoration,220,M2,1200,2500,Asphalt laying and compaction crew (Paver + Compactor + 3 Laborers)
+CR-07,Duct Installation,120,M,1300,1000,Conduit / duct installation crew (Trench helper + 4 Laborers)
+CR-08,Earthing Work,10,EA,1100,500,Earthing rod installation crew (Hammer machine + 3 Laborers)
+CR-09,Testing Commissioning,4,EA,2500,1800,High-end testing crew (Secondary injection kit + 2 Engineers)
+CR-10,Overhead Installation,5,EA,1800,2200,Overhead line / poles installation crew (Crane + 4 Technicians)

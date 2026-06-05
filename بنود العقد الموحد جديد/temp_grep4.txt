@@ -1,0 +1,27 @@
+Line 66: <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+Line 139: <div class="nav-item" data-page="pdf">
+Line 140: <span class="nav-icon">📄</span><span class="nav-txt" data-k="nav.pdf"></span>
+Line 201: <button class="btn btn-outline btn-sm" onclick="App.go('pdf')">📄 PDF</button>
+Line 222: <script src="js/pdf-analyzer.js"></script>
+Line 226: Full Arabic/English | Dark/Light | PDF AI Analysis
+Line 234: 'nav.pdf': 'التحليل الذكي بالذكاء الاصطناعي',
+Line 249: 'page.pdf': 'التحليل الذكي بالذكاء الاصطناعي',
+Line 265: 'nav.pdf': 'AI Smart Analyzer',
+Line 280: 'page.pdf': 'AI Smart Analyzer',
+Line 355: pdfResult: null,
+Line 369: if (window.pdfjsLib) {
+Line 370: window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+Line 371: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+Line 437: const icons = { dashboard:'🏠', boq:'📋', pdf:'📄', analyzer:'📂', compare:'⚖️', certificate:'📜', search:'🔍', pricelist:'📊', saved:'💾', support:'📞' };
+Line 450: pdf:       () => this.renderPDF(area),
+Line 579: {icon:'📄', ar:'تحليل ملف PDF', en:'Analyze PDF File', subAr:'استخراج ذكي + كشف أخطاء', subEn:'Smart extraction + error detection', page:'pdf'},
+Line 663: <button class="btn btn-outline" onclick="App.exportBOQ('pdf')" style="padding:7px 16px;font-size:12.5px;">🖨️ PDF</button>
+Line 1023: if (this.state.boq.meta.pdfNote) {
+Line 1025: <strong style="color:var(--text-h)">${ar?'ملاحظة فحص الـ PDF:':'PDF Scan Note:'}</strong> ${this.state.boq.meta.pdfNote}
+Line 1060: else if(type==='pdf') exportToPDF(this.state.boq, this.state.boq.meta);
+Line 1130: // PDF ANALYZER (AI-powered - Delegated to pdf-analyzer.js)
+Line 1132: renderPDF(c) {
+Line 1133: if (typeof renderPDFAnalyzer === 'function') {
+Line 1134: renderPDFAnalyzer(c);
+Line 1136: c.innerHTML = '<div class="alert alert-danger">خطأ: مكتبة محلل الـ PDF المتقدمة غير محملة.</div>';
+Line 1311: ${dep.missing.length?`<div class="card"><div class="card-head" style="background:rgba(255,77,106,0.07);"><span>⚠️</span><span class="card-title" style="color:var(--accent-red);">${ar?'بنود مفقودة':'Missing Items'} — ${dep.missing.length}</span></div><div class="validator-wrap">${this._renderPDFMissing(dep).replace('<div class="validator-wrap">','').replace('</div>','')}</div></div>`:`<div class="alert alert-ok"><span class="alert-icon">✅</span><span>${ar?'المقايسة مكتملة':'BOQ is complete'}</span></div>`}
